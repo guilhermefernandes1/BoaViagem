@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<TableLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:stretchColumns="0,1,2">
+	    
+	    <LinearLayout
+	        android:orientation="vertical">
+	      
+	        <TextView android:text="@string/destino"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"/>
+	        
+	        <EditText 
+	            android:id="@+id/destino"
+	            android:inputType="text"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"/>
+	        
+	        <TextView 
+	            android:text="@string/tipo_da_viagem"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"/>
+	        
+	        <RadioGroup
+	            android:id="@+id/tipo_da_viagem"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+
+	            <RadioButton
+	                android:id="@+id/lazer"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:checked="true"
+	                android:text="@string/lazer" />
+
+	            <RadioButton
+	                android:id="@+id/negocios"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginStart="90dp"
+	                android:text="@string/negocios" />	            
+
+	        </RadioGroup>
+	        
+	        <TableRow
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent" >
+
+	            <TextView 
+	                android:text="@string/data_saida"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"/>
+
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/data_chegada"
+	                android:layout_marginStart="90dp" />
+
+	        </TableRow>
+	        
+	        <TableRow 
+	            android:layout_height="match_parent"
+	            android:layout_width="match_parent">
+	            
+	            <Button 
+	                android:id="@+id/data_saida"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:onClick="selecionarData"
+	                android:text="@string/selecione"/>
+
+	            <Button
+	                android:id="@+id/data_chegada"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginStart="60dp"
+	                android:onClick="selecionarData"
+	                android:text="@string/selecione" />
+	            
+	        </TableRow>
+	        
+	        <TextView 
+	            android:text="@string/orcamento"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"/>
+	        <EditText 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/orcamento"
+	            android:inputType="numberDecimal"/>
+	        
+	        <TableRow 
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent">
+	            
+	            <TextView 
+	                android:text="@string/quantidade_pessoas"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"/>
+	            
+	            <EditText 
+	                android:id="@+id/quantidade_pessoas"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:inputType="number"/>
+	            
+	        </TableRow>
+	        
+	        <Button 
+	            android:text="@string/salvar"
+	            android:onClick="salvarViagem"
+	            android:layout_height="wrap_content"
+	            android:layout_width="match_parent"/>
+
+	    </LinearLayout>
+	    
+	</TableLayout>
+    
+
+</ScrollView>
